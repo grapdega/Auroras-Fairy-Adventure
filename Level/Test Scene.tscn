@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6xoclbwhrh3i"]
+
+[ext_resource type="PackedScene" uid="uid://bjjceeyq3csc3" path="res://Assets/Dynamic Sky/Sky.tscn" id="1_vfavf"]
+[ext_resource type="Terrain3DStorage" uid="uid://bxdm3i37qnrqf" path="res://TerrainData/terrain_3d_storage.res" id="5_rk4xj"]
+[ext_resource type="Terrain3DMaterial" uid="uid://djky7ymc7vt5r" path="res://TerrainData/terrain_3d_material.res" id="6_2inty"]
+[ext_resource type="PackedScene" uid="uid://c3cxxw11o6e16" path="res://Scenes/village_2.tscn" id="6_poqyv"]
+[ext_resource type="Terrain3DTextureList" uid="uid://d2qw6cgt77610" path="res://TerrainData/3d_texture_list.res" id="7_7qc6k"]
+[ext_resource type="Material" uid="uid://dk1l3pp86ehcl" path="res://Materials/mat_retroVillage_grass.material" id="7_j6th2"]
+[ext_resource type="Script" path="res://addons/ultimate_character/ucharacterbody3d.gd" id="9_anpbl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hxkfi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7nrf"]
+height = 1.3
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_14cms"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aey47"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera And Light" type="Node3D" parent="."]
+
+[node name="Light" parent="Camera And Light" instance=ExtResource("1_vfavf")]
+transform = Transform3D(0.596533, 0.432305, 0.676211, -0.72264, -0.0772707, 0.686892, 0.349198, -0.898411, 0.266306, 0, 0, 0)
+
+[node name="Sun" parent="Camera And Light/Light" index="1"]
+transform = Transform3D(0.920626, 0, -0.390445, -0.390445, -4.37114e-08, -0.920626, -1.70669e-08, 1, -4.02418e-08, 0, 0, 0)
+light_energy = 1.0
+directional_shadow_blend_splits = true
+
+[node name="Moon" parent="Camera And Light/Light" index="2"]
+transform = Transform3D(0.995978, 0, 0.0895896, 0.0189377, -0.977403, -0.210533, 0.0875651, 0.211383, -0.973473, 0, 0, 0)
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+storage = ExtResource("5_rk4xj")
+material = ExtResource("6_2inty")
+texture_list = ExtResource("7_7qc6k")
+
+[node name="UCharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.585, 1.0661, -383.73)
+script = ExtResource("9_anpbl")
+LEFT = "ui_left"
+RIGHT = "ui_right"
+FORWARD = "ui_forward"
+BACKWARD = "ui_backward"
+JUMP = "space"
+
+[node name="CollisionShapeNormal" type="CollisionShape3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_hxkfi")
+
+[node name="CollisionShapeCrouch" type="CollisionShape3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+shape = SubResource("CapsuleShape3D_x7nrf")
+disabled = true
+
+[node name="Head" type="Node3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Camera" type="Camera3D" parent="UCharacterBody3D/Head"]
+transform = Transform3D(1, 0, 0, 0, 0.889384, 0.45716, 0, -0.45716, 0.889384, 0.252213, 4.08212, 3.35259)
+fov = 90.0
+
+[node name="RayCast3D" type="RayCast3D" parent="UCharacterBody3D"]
+target_position = Vector3(0, 2, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06822, 0.0337219)
+mesh = SubResource("CapsuleMesh_14cms")
+
+[node name="World" type="Node" parent="."]
+
+[node name="Village_2" parent="World" instance=ExtResource("6_poqyv")]
+transform = Transform3D(3.25089, 0, 0, 0, 3.25089, 0, 0, 0, 3.25089, 132.901, 1.11903, -435.377)
+
+[node name="CollisionShape3D" parent="World/Village_2/Pillar_021/Pillar_021_Material_005_0/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="GridMap" type="GridMap" parent="."]
+data = {
+"cells": PackedInt32Array(119, 65343, 32, 121, 65341, 38, 125, 65341, 46, 125, 65340, 46, 108, 65339, 16, 117, 65344, 0, 120, 65345, 8, 126, 65347, 10, 126, 65348, 10, 126, 65349, 10, 126, 65350, 10, 126, 65351, 10, 126, 65352, 10, 126, 65353, 10, 126, 65355, 10, 128, 65347, 11, 128, 65348, 11, 128, 65349, 11, 128, 65350, 11, 128, 65351, 11, 128, 65352, 11, 128, 65353, 11, 128, 65354, 11, 128, 65355, 11, 128, 65346, 12, 126, 65346, 12, 125, 65347, 1441804, 125, 65349, 1441804, 125, 65350, 1441804, 125, 65351, 1441804, 125, 65352, 1441804, 125, 65353, 1441804, 125, 65354, 1441804, 125, 65355, 1441804, 129, 65347, 1441804, 129, 65348, 1441804, 129, 65349, 1441804, 129, 65350, 1441804, 129, 65351, 1441804, 129, 65352, 1441804, 129, 65353, 1441804, 129, 65354, 1441804, 129, 65355, 1441804, 119, 65334, 1441835, 115, 65327, 1441835, 109, 65332, 1441835, 113, 65335, 1441835, 122, 65361, 1441835, 121, 65361, 1441835, 121, 65360, 1441835, 120, 65360, 1441835, 119, 65360, 1441835, 118, 65360, 1441835, 117, 65359, 1441835, 116, 65359, 1441835, 114, 65358, 1441835, 113, 65358, 1441835, 110, 65357, 1441835, 109, 65357, 1441835, 108, 65356, 1441835, 107, 65355, 1441835, 106, 65355, 1441835, 105, 65354, 1441835, 103, 65353, 1441835, 102, 65352, 1441835, 100, 65350, 1441835, 99, 65350, 1441835, 98, 65349, 1441835, 97, 65348, 1441835, 96, 65348, 1441835, 95, 65347, 1441835, 94, 65346, 1441835, 94, 65345, 1441835, 93, 65345, 1441835, 93, 65344, 1441835, 92, 65343, 1441835, 90, 65340, 1441835, 90, 65339, 1441835, 89, 65338, 1441835, 89, 65337, 1441835, 88, 65336, 1441835, 88, 65335, 1441835, 88, 65332, 1441835, 88, 65331, 1441835, 88, 65330, 1441835, 88, 65329, 1441835, 88, 65327, 1441835, 89, 65325, 1441835, 89, 65324, 1441835, 90, 65322, 1441835, 92, 65320, 1441835, 94, 65319, 1441835, 96, 65317, 1441835, 97, 65316, 1441835, 98, 65315, 1441835, 99, 65315, 1441835, 99, 65314, 1441835, 100, 65314, 1441835, 146, 65344, 1441835, -65391, 65345, 1441835, -65390, 65350, 1441835)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="GridMap"]
+transform = Transform3D(145.677, 0, 0, 0, 1, 0, 0, 0, 95.1191, 231.097, 0.941249, -395.841)
+use_collision = true
+mesh = SubResource("PlaneMesh_aey47")
+material = ExtResource("7_j6th2")
+metadata/_edit_lock_ = true
+
+[editable path="Camera And Light/Light"]
+[editable path="World/Village_2"]
