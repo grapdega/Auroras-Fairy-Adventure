@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://blmha50611bi8"]
+[gd_scene load_steps=16 format=3 uid="uid://bxipeithtsr8y"]
 
 [ext_resource type="Script" path="res://Level/amogus.gd" id="1_flq4o"]
 [ext_resource type="Texture2D" uid="uid://byr5ydogw0ta4" path="res://Models/Village2_Material.png" id="1_p5q5e"]
