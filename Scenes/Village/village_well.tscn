@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4t8l0dblfp6n"]
+[gd_scene load_steps=4 format=3 uid="uid://b4t8l0dblfp6n"]
 
 [ext_resource type="ArrayMesh" uid="uid://c0v36rr8dny3h" path="res://Models/Valley/Village_Well_Material_005_0.res" id="1_ksgy5"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_qla0s"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_vher7"]
 height = 3.03527
 radius = 1.55349
 
 [node name="VillageWell" type="MeshInstance3D"]
+material_override = ExtResource("1_qla0s")
 mesh = ExtResource("1_ksgy5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

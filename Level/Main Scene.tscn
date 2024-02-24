@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmawmkqq0jxu4"]
+[gd_scene load_steps=27 format=3 uid="uid://cmawmkqq0jxu4"]
 
 [ext_resource type="PackedScene" uid="uid://bjjceeyq3csc3" path="res://Assets/Dynamic Sky/Sky.tscn" id="1_e47ty"]
 [ext_resource type="Terrain3DStorage" uid="uid://bxdm3i37qnrqf" path="res://TerrainData/terrain_3d_storage.res" id="2_51vvy"]
@@ -8,6 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://c3cxxw11o6e16" path="res://Scenes/village_2.tscn" id="6_8e7fa"]
 [ext_resource type="PackedScene" uid="uid://bttfxycfxac75" path="res://Scenes/Fary.tscn" id="6_gyjkf"]
 [ext_resource type="Material" uid="uid://dk1l3pp86ehcl" path="res://Materials/mat_retroVillage_grass.material" id="7_a4g24"]
+[ext_resource type="PackedScene" uid="uid://cnhgwmv4x8iij" path="res://Scenes/Village/village_farm_cabbage.tscn" id="8_y5umi"]
+[ext_resource type="PackedScene" uid="uid://bu7n0r7240tpp" path="res://Scenes/Village/village_farm_wheat.tscn" id="9_2jg2u"]
+[ext_resource type="PackedScene" uid="uid://bq5ko5oo460aj" path="res://Scenes/Village/village_farm_carrot.tscn" id="11_8gs5w"]
+[ext_resource type="PackedScene" uid="uid://xqrbw46elhb2" path="res://Scenes/Village/village_hay_bale.tscn" id="12_iyxo8"]
+[ext_resource type="PackedScene" uid="uid://dd25jp3ps7808" path="res://Scenes/Village/village_windmill.tscn" id="12_jk4r3"]
+[ext_resource type="PackedScene" uid="uid://c41c1h1x6fnon" path="res://Scenes/Village/village_market_stall_red.tscn" id="13_kbjjx"]
+[ext_resource type="PackedScene" uid="uid://db1v58gq1f5ks" path="res://Scenes/Village/village_market_stall_blue.tscn" id="14_v5x6d"]
+[ext_resource type="PackedScene" uid="uid://c62h3tqhrtgj8" path="res://Scenes/Village/village_hay_pile.tscn" id="14_vgw7s"]
+[ext_resource type="PackedScene" uid="uid://df12d2kc86jwc" path="res://Scenes/Village/village_hay_cart.tscn" id="15_uts4g"]
+[ext_resource type="PackedScene" uid="uid://byqkflbb0unyb" path="res://Scenes/Village/village_crate.tscn" id="18_a2dgk"]
+[ext_resource type="PackedScene" uid="uid://u4aoyemilmfc" path="res://Scenes/Village/village_sphere_001.tscn" id="19_u546x"]
+[ext_resource type="PackedScene" uid="uid://b5f7dwcvynr2b" path="res://Scenes/Village/village_barn.tscn" id="20_d131n"]
+[ext_resource type="PackedScene" uid="uid://dhdsnnjhkth2r" path="res://Scenes/Village/village_house_purple.tscn" id="21_eq006"]
+[ext_resource type="PackedScene" uid="uid://bb16y4mg1e8ul" path="res://Scenes/Village/village_house_2_story_purple.tscn" id="22_vuiy4"]
+[ext_resource type="PackedScene" uid="uid://co1va8134jmf" path="res://Scenes/Village/village_fence.tscn" id="23_h4nmi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hxkfi"]
 
@@ -37,7 +52,7 @@ material = ExtResource("3_7ym3j")
 texture_list = ExtResource("4_arb8h")
 
 [node name="UCharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 214.904, 1.0661, -385.915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.735, 1.0661, -393.082)
 script = ExtResource("5_xg42a")
 LEFT = "ui_left"
 RIGHT = "ui_right"
@@ -59,7 +74,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="Camera" type="Camera3D" parent="UCharacterBody3D/Head"]
 transform = Transform3D(1, 0, 0, 0, 0.889384, 0.45716, 0, -0.45716, 0.889384, 0.252213, 4.08212, 3.35259)
-fov = 90.0
+fov = 130.0
 
 [node name="RayCast3D" type="RayCast3D" parent="UCharacterBody3D"]
 target_position = Vector3(0, 2, 0)
@@ -69,7 +84,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.7
 
 [node name="Skeleton3D" parent="UCharacterBody3D/Fary/Sketchfab_model/Navi_fbx/Object_2/RootNode/Object_4" index="0"]
 bones/2/position = Vector3(-1.16415e-10, 0.001469, 2.12051)
-bones/2/rotation = Quaternion(0.680701, -0.191589, 0.691705, -0.146574)
 bones/3/rotation = Quaternion(-0.810118, 0.00752093, -0.024306, 0.585715)
 bones/4/rotation = Quaternion(-0.531956, 0.0247331, -0.00593056, 0.84639)
 
@@ -77,6 +91,379 @@ bones/4/rotation = Quaternion(-0.531956, 0.0247331, -0.00593056, 0.84639)
 
 [node name="Village_2" parent="World" instance=ExtResource("6_8e7fa")]
 transform = Transform3D(3.25089, 0, 0, 0, 3.25089, 0, 0, 0, 3.25089, 141.139, 1.11903, -394.106)
+visible = false
+
+[node name="VillageFarmCabbage" type="Node3D" parent="World"]
+
+[node name="VillageFarmCabbage" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 151.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage2" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 151.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage3" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 151.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage4" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 155.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage5" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 155.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage6" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 155.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage7" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 159.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage8" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 159.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage9" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 159.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage10" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 137.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage11" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 137.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage12" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 137.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage13" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 141.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage14" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 141.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage15" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 141.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage16" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 145.329, 0.941249, -401.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage17" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 145.329, 0.941249, -397.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCabbage18" parent="World/VillageFarmCabbage" instance=ExtResource("8_y5umi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 145.329, 0.941249, -393.585)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmWheat" type="Node3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 1, -394)
+
+[node name="VillageFarmWheat" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat2" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat3" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat4" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat5" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat6" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat7" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat8" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat9" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat10" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat11" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -12)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat12" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -12)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat13" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat14" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -16)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat15" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -16)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat16" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat17" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -20)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmWheat18" parent="World/VillageFarmWheat" instance=ExtResource("9_2jg2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -20)
+skeleton = NodePath("../..")
+
+[node name="VillageFarmCarrot" type="Node3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 1, -415)
+
+[node name="VillageFarmCarrot" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot2" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 7)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot3" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot4" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot5" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot6" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot7" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+skeleton = NodePath("../../..")
+
+[node name="VillageFarmCarrot8" parent="World/VillageFarmCarrot" instance=ExtResource("11_8gs5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 7)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale" type="Node3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.74, 0.941249, -417.089)
+
+[node name="VillageHayBale" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34238, 0, -0.0498962)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale2" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.65762, 0, -0.0498962)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale3" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.963532, 0, -0.267592, 0, 1, 0, 0.267592, 0, 0.963532, -11.6383, 9.53674e-07, -2.00348)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale4" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.963532, 0, -0.267592, 0, 1, 0, 0.267592, 0, 0.963532, 12.3896, 9.53674e-07, -4.74997)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale5" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.963532, 0, -0.267592, 0, 1, 0, 0.267592, 0, 0.963532, 5.72232, 9.53674e-07, -8.71176)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale6" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, 19.3145, 9.53674e-07, -8.15475)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale7" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, 23.9188, 9.53674e-07, -2.48459)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale8" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, 25.1566, 9.53674e-07, -12.376)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale9" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, 12.0979, 0, -13.6568)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale10" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, -21.7276, 0, -5.04892)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale11" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, -27.2748, 0, 0.161774)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale12" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, -31.1053, 0, -6.09729)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale13" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, -35.741, 0, -1.68018)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale14" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.990929, 0, -0.134384, 0, 1, 0, 0.134384, 0, 0.990929, -40.7599, 0, -7.86435)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale15" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.994495, 0, 0.104789, 0, 1, 0, -0.104789, 0, 0.994495, -24.6356, 2.38419e-07, 21.4772)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale23" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.987998, 0, -0.154469, 0, 1, 0, 0.154469, 0, 0.987998, -25.2181, 2.38419e-07, 24.2923)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale24" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.419435, 0.788195, -0.450358, -0.888806, 0.45748, -0.0271188, 0.184655, 0.411656, 0.892436, -23.8495, 0.653862, 23.6059)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale19" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.994495, 0, 0.104789, 0, 1, 0, -0.104789, 0, 0.994495, -26.3972, 2.38419e-07, 20.3961)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale20" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.824521, 0, 0.565831, 0, 1, 0, -0.565831, 0, 0.824521, -24.6104, 1.50343, 20.2078)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale21" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.824521, 0, 0.565831, 0, 1, 0, -0.565831, 0, 0.824521, -23.5272, 1.50343, 18.2516)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale22" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.886228, -0.357105, -0.295087, 3.60826e-08, 0.636993, -0.770869, 0.46325, 0.683166, 0.564521, -24.5614, 2.08503, 22.0697)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale25" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.0241183, 0.770645, 0.636808, 1.32443e-08, 0.636993, -0.770869, -0.999709, 0.018592, 0.0153631, -23.1818, 2.08503, 20.8117)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale16" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.995094, 0, -0.0989377, 0, 1, 0, 0.0989377, 0, 0.995094, -22.8947, 2.38419e-07, 21.2775)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale17" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.993485, 0, 0.113966, 0, 1, 0, -0.113966, 0, 0.993485, -23.1838, 2.38419e-07, 18.7567)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayBale18" parent="World/VillageHayBale" instance=ExtResource("12_iyxo8")]
+transform = Transform3D(0.933154, 0, 0.359476, 0, 1, 0, -0.359476, 0, 0.933154, -25.1399, 2.38419e-07, 18.981)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayCart" type="Node3D" parent="World"]
+
+[node name="VillageHayCart" parent="World/VillageHayCart" instance=ExtResource("15_uts4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 177.212, 0.941249, -430.015)
+skeleton = NodePath("../../..")
+
+[node name="Bazaar" type="Node3D" parent="World"]
+
+[node name="VillageMarketStallRed" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(-0.0524231, 0, 0.998625, 0, 1, 0, -0.998625, 0, -0.0524231, 95.1105, 0.941249, -377.629)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed2" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(-0.0524231, 0, 0.998625, 0, 1, 0, -0.998625, 0, -0.0524231, 100.11, 0.941249, -362.629)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed5" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(-0.0457117, 0, -0.998955, 0, 1, 0, 0.998955, 0, -0.0457117, 120.073, 0.941249, -354.406)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed6" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(-0.0457117, 0, -0.998955, 0, 1, 0, 0.998955, 0, -0.0457117, 120.073, 0.941249, -364.406)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed7" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(-0.967753, 0, 0.2519, 0, 1, 0, -0.2519, 0, -0.967753, 100.839, 0.941249, -349.866)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed3" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(0.973163, 0, -0.230118, 0, 1, 0, 0.230118, 0, 0.973163, 106.483, 0.941247, -387.109)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallRed4" parent="World/Bazaar" instance=ExtResource("13_kbjjx")]
+transform = Transform3D(0.992433, 0, 0.122787, 0, 1, 0, -0.122787, 0, 0.992433, 96.5459, 0.941247, -391.618)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallBlue" parent="World/Bazaar" instance=ExtResource("14_v5x6d")]
+transform = Transform3D(0.144563, 0, 0.989496, 0, 1, 0, -0.989496, 0, 0.144563, 111.104, 0.941249, -364.683)
+skeleton = NodePath("../../..")
+
+[node name="VillageMarketStallBlue2" parent="World/Bazaar" instance=ExtResource("14_v5x6d")]
+transform = Transform3D(-0.999308, 0, 0.0371844, 0, 1, 0, -0.0371844, 0, -0.999308, 112.209, 0.941249, -349.527)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile" type="Node3D" parent="World"]
+
+[node name="VillageHayPile" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.37, 0.941249, -425.831)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile2" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(0.881992, 0, 0, 0, 0.881992, 0, 0, 0, 0.881992, 174.074, 0.941249, -428.093)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile3" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.144, 0.941248, -407.857)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile4" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.144, 0.941248, -414.857)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile5" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.144, 0.941248, -421.857)
+skeleton = NodePath("../../..")
+
+[node name="VillageHayPile6" parent="World/VillageHayPile" instance=ExtResource("14_vgw7s")]
+transform = Transform3D(0.726978, 0.00963348, -0.0408035, -0.00651806, 0.726054, 0.0552878, 0.0414155, -0.0548309, 0.724936, 108.574, 0.941248, -422.81)
+skeleton = NodePath("../../..")
+
+[node name="Windmill" type="Node3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.064, 0.941249, -428.48)
+
+[node name="VillageWindmill" parent="World/Windmill" instance=ExtResource("12_jk4r3")]
+skeleton = NodePath("../../..")
+
+[node name="VillageWindmill2" parent="World/Windmill" instance=ExtResource("12_jk4r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2319, 0, -11.5262)
+skeleton = NodePath("../../..")
+
+[node name="VillageWindmill3" parent="World/Windmill" instance=ExtResource("12_jk4r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1173, 0, -8.88297)
+skeleton = NodePath("../../..")
+
+[node name="Node3D" type="Node3D" parent="World"]
 
 [node name="GridMap" type="GridMap" parent="."]
 data = {
@@ -90,6 +477,169 @@ use_collision = true
 mesh = SubResource("PlaneMesh_aey47")
 material = ExtResource("7_a4g24")
 metadata/_edit_lock_ = true
+
+[node name="VillageCrate" type="Node3D" parent="."]
+
+[node name="VillageCrate" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.954433, 0, -0.298425, 0, 1, 0, 0.298425, 0, 0.954433, 97.2249, 0.941249, -402.898)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate2" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.988631, 0, 0.150364, 0, 1, 0, -0.150364, 0, 0.988631, 96.9985, 0.941249, -401.116)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate3" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.954433, 0, -0.298425, 0, 1, 0, 0.298425, 0, 0.954433, 98.811, 0.941249, -402.725)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate4" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.954433, 0, -0.298425, 0, 1, 0, 0.298425, 0, 0.954433, 98.7091, 0.941249, -400.952)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate5" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.999038, 0, 0.0438635, 0, 1, 0, -0.0438635, 0, 0.999038, 98.0581, 2.29162, -401.433)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate7" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.954433, 0, -0.298425, 0, 1, 0, 0.298425, 0, 0.954433, 98.3942, 2.29162, -403.016)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate8" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.999268, 0, 0.0382657, 0, 1, 0, -0.0382657, 0, 0.999268, 98.5257, 3.74058, -402.186)
+skeleton = NodePath("../..")
+
+[node name="VillageCrate6" parent="VillageCrate" instance=ExtResource("18_a2dgk")]
+transform = Transform3D(0.599303, 0, -0.800522, 0, 1, 0, 0.800522, 0, 0.599303, 98.0033, 0.941249, -404.564)
+skeleton = NodePath("../..")
+
+[node name="VillageSphere001" parent="." instance=ExtResource("19_u546x")]
+transform = Transform3D(0.821856, 0, 0, 0, 0.821856, 0, 0, 0, 0.821856, 113.857, 0.94125, -406.735)
+
+[node name="VillageBarn" parent="." instance=ExtResource("20_d131n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.659, 0.941249, -406.556)
+
+[node name="VillageHousePurple" parent="." instance=ExtResource("21_eq006")]
+transform = Transform3D(0.154935, 0, 0.987925, 0, 1, 0, -0.987925, 0, 0.154935, 198.225, 0.941249, -374.303)
+
+[node name="VillageHouse2StoryPurple" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(0.107722, 0, 0.994181, 0, 1, 0, -0.994181, 0, 0.107722, 126.494, 0.941249, -355.271)
+
+[node name="VillageHouse2StoryPurple2" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(-0.0889116, 0, 0.99604, 0, 1, 0, -0.99604, 0, -0.0889116, 126.76, 0.941249, -363.897)
+
+[node name="VillageHouse2StoryPurple3" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(0.246509, 0, 0.969141, 0, 1, 0, -0.969141, 0, 0.246509, 125.76, 0.941249, -378.897)
+
+[node name="VillageHouse2StoryPurple4" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(-0.091519, 0, -0.995803, 0, 1, 0, 0.995803, 0, -0.091519, 139.548, 0.941247, -370.324)
+
+[node name="VillageHouse2StoryPurple5" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(-0.0191451, 0, -0.999817, 0, 1, 0, 0.999817, 0, -0.0191451, 140.143, 0.941249, -378.617)
+
+[node name="VillageHouse2StoryPurple6" parent="." instance=ExtResource("22_vuiy4")]
+transform = Transform3D(0.0681197, 0, -0.997677, 0, 1, 0, 0.997677, 0, 0.0681197, 139.843, 0.941249, -386.517)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 143.013, 0.941249, -389.427)
+
+[node name="VillageFence" parent="Node3D" instance=ExtResource("23_h4nmi")]
+skeleton = NodePath("../..")
+
+[node name="VillageFence2" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="VillageFence3" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="VillageFence4" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="VillageFence5" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.64387, 0, 0.765135, 0, 1, 0, -0.765135, 0, 0.64387, 18.7308, 0, -0.200012)
+skeleton = NodePath("../..")
+
+[node name="VillageFence6" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.179043, 0, 0.983841, 0, 1, 0, -0.983841, 0, -0.179043, 21.2308, 0, -3.90002)
+skeleton = NodePath("../..")
+
+[node name="VillageFence7" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.165392, 0, 0.986228, 0, 1, 0, -0.986228, 0, 0.165392, 20.7654, 0, -8.30188)
+skeleton = NodePath("../..")
+
+[node name="VillageFence8" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.174215, 0, 0.984708, 0, 1, 0, -0.984708, 0, -0.174215, 21.3626, 0, -12.7145)
+skeleton = NodePath("../..")
+
+[node name="VillageFence9" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.0373763, 0, 0.999301, 0, 1, 0, -0.999301, 0, -0.0373763, 20.7626, 0, -17.1145)
+skeleton = NodePath("../..")
+
+[node name="VillageFence10" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.0373763, 0, 0.999301, 0, 1, 0, -0.999301, 0, -0.0373763, 20.6488, 0, -21.4664)
+skeleton = NodePath("../..")
+
+[node name="VillageFence11" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.986455, 0, 0.164032, 0, 1, 0, -0.164032, 0, 0.986455, 20.8594, 0, -25.2044)
+skeleton = NodePath("../..")
+
+[node name="VillageFence12" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.986455, 0, 0.164032, 0, 1, 0, -0.164032, 0, 0.986455, 25.2594, 0, -25.9044)
+skeleton = NodePath("../..")
+
+[node name="VillageFence13" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.536608, 0, 0.843832, 0, 1, 0, -0.843832, 0, 0.536608, 29.8398, 0, -27.0101)
+skeleton = NodePath("../..")
+
+[node name="VillageFence14" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.697878, 0, 0.716217, 0, 1, 0, -0.716217, 0, 0.697878, 32.3669, 0, -30.906)
+skeleton = NodePath("../..")
+
+[node name="VillageFence15" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.518102, 0, 0.855319, 0, 1, 0, -0.855319, 0, 0.518102, 35.4205, 0, -33.9596)
+skeleton = NodePath("../..")
+
+[node name="VillageFence16" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.0873992, 0, 0.996173, 0, 1, 0, -0.996173, 0, 0.0873992, 37.7371, 0, -37.7503)
+skeleton = NodePath("../..")
+
+[node name="VillageFence17" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.0505406, 0, 0.998722, 0, 1, 0, -0.998722, 0, -0.0505406, 38.053, 0, -42.1201)
+skeleton = NodePath("../..")
+
+[node name="VillageFence18" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.241261, 0, 0.97046, 0, 1, 0, -0.97046, 0, -0.241261, 37.8424, 0, -46.5426)
+skeleton = NodePath("../..")
+
+[node name="VillageFence19" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.0627906, 0, 0.998027, 0, 1, 0, -0.998027, 0, 0.0627906, 36.8424, 0, -50.8426)
+skeleton = NodePath("../..")
+
+[node name="VillageFence20" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.170708, 0, 0.985322, 0, 1, 0, -0.985322, 0, -0.170708, 37.1056, 0, -55.2124)
+skeleton = NodePath("../..")
+
+[node name="VillageFence21" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.170708, 0, 0.985322, 0, 1, 0, -0.985322, 0, -0.170708, 36.3159, 0, -59.4243)
+skeleton = NodePath("../..")
+
+[node name="VillageFence22" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(0.0153409, 0, 0.999882, 0, 1, 0, -0.999882, 0, 0.0153409, 35.6388, 0, -63.5769)
+skeleton = NodePath("../..")
+
+[node name="VillageFence23" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.358156, 0, 0.933662, 0, 1, 0, -0.933662, 0, -0.358156, 35.7291, 0, -67.9552)
+skeleton = NodePath("../..")
+
+[node name="VillageFence24" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.999924, 0, -0.0123391, 0, 1, 0, 0.0123391, 0, -0.999924, 33.5173, 0, -71.7016)
+skeleton = NodePath("../..")
+
+[node name="VillageFence25" parent="Node3D" instance=ExtResource("23_h4nmi")]
+transform = Transform3D(-0.999924, 0, -0.0123391, 0, 1, 0, 0.0123391, 0, -0.999924, 28.7339, 0, -71.862)
+skeleton = NodePath("../..")
 
 [editable path="Camera And Light/Light"]
 [editable path="UCharacterBody3D/Fary"]

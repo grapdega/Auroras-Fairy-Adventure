@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcokyesbj1wwh"]
+[gd_scene load_steps=3 format=3 uid="uid://bcokyesbj1wwh"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_3xxdf"]
 [ext_resource type="ArrayMesh" uid="uid://cq44cdrk6du77" path="res://Models/Valley/Village_Pond_Material_005_0.res" id="1_bpbcq"]
 
 [node name="VillagePond" type="MeshInstance3D"]
+material_override = ExtResource("1_3xxdf")
 mesh = ExtResource("1_bpbcq")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq5ko5oo460aj"]
+[gd_scene load_steps=3 format=3 uid="uid://bq5ko5oo460aj"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_6mjew"]
 [ext_resource type="ArrayMesh" uid="uid://bfd8we52lp30m" path="res://Models/Valley/Village_Farm_Carrot_Material_005_0.res" id="1_x47u8"]
 
 [node name="VillageFarmCarrot" type="MeshInstance3D"]
+material_override = ExtResource("1_6mjew")
 mesh = ExtResource("1_x47u8")

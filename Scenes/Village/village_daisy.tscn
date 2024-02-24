@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://hs0my2qh2np"]
+[gd_scene load_steps=3 format=3 uid="uid://hs0my2qh2np"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_4x1ap"]
 [ext_resource type="ArrayMesh" uid="uid://c4tgupogky8cq" path="res://Models/Valley/Village_Daisy_Material_005_0.res" id="1_j05rh"]
 
 [node name="VillageDaisy" type="MeshInstance3D"]
+material_override = ExtResource("1_4x1ap")
 mesh = ExtResource("1_j05rh")

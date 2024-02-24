@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdjtdsn3jrhnk"]
+[gd_scene load_steps=4 format=3 uid="uid://cdjtdsn3jrhnk"]
 
 [ext_resource type="ArrayMesh" uid="uid://dc5qlt4d53wys" path="res://Models/Valley/Village_Garland_Material_005_0.res" id="1_qsg11"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_wnkdp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1g47"]
 size = Vector3(0.362061, 3.96487, 0.381104)
 
 [node name="VillageGarland" type="MeshInstance3D"]
+material_override = ExtResource("1_wnkdp")
 mesh = ExtResource("1_qsg11")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://u4aoyemilmfc"]
+[gd_scene load_steps=5 format=3 uid="uid://u4aoyemilmfc"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_0eblp"]
 [ext_resource type="ArrayMesh" uid="uid://ir27aqh1bewu" path="res://Models/Valley/Village_Sphere_001_Material_005_0.res" id="1_klgo6"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_la8a7"]
@@ -10,6 +11,7 @@ radius = 3.28549
 size = Vector3(1.35138, 11.2886, 1.27002)
 
 [node name="VillageSphere001" type="MeshInstance3D"]
+material_override = ExtResource("1_0eblp")
 mesh = ExtResource("1_klgo6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

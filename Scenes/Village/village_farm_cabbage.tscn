@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnhgwmv4x8iij"]
+[gd_scene load_steps=3 format=3 uid="uid://cnhgwmv4x8iij"]
 
 [ext_resource type="ArrayMesh" uid="uid://rlgh5dut46vb" path="res://Models/Valley/Village_Farm_Cabbage_Material_005_0.res" id="1_goyld"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_vbwal"]
 
 [node name="VillageFarmCabbage" type="MeshInstance3D"]
+material_override = ExtResource("1_vbwal")
 mesh = ExtResource("1_goyld")

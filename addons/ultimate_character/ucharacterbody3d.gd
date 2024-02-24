@@ -103,6 +103,7 @@ func _ready():
 			collision_shape_normal.position.y = 1.0
 			self.add_child(collision_shape_normal)
 			collision_shape_normal.owner = scene
+			
 		
 		if collision_shape_crouch == null:
 			collision_shape_crouch = CollisionShape3D.new()
@@ -179,6 +180,7 @@ func _physics_process(delta):
 			
 			if Input.is_action_pressed(SPRINT):
 				current_speed = lerpf(current_speed, sprint_speed, delta * 10.0)
+				animation_player.play("Run")
 				
 				is_walking = false
 				is_sprinting = true
@@ -186,7 +188,7 @@ func _physics_process(delta):
 				
 			else:
 				current_speed = lerpf(current_speed, walk_speed, delta * 10.0)
-
+				animation_player.play("idle")
 				is_walking = true
 				is_sprinting = false
 				is_crouching = false

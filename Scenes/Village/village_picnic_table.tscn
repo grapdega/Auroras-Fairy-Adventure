@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://f0eoqttyww2q"]
+[gd_scene load_steps=4 format=3 uid="uid://f0eoqttyww2q"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_drjjs"]
 [ext_resource type="ArrayMesh" uid="uid://deyom1cultl4n" path="res://Models/Valley/Village_Picnic Table_Material_005_0.res" id="1_ehtbd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_daer4"]
 size = Vector3(3.14984, 1.01611, 1.46973)
 
 [node name="VillagePicnicTable" type="MeshInstance3D"]
+material_override = ExtResource("1_drjjs")
 mesh = ExtResource("1_ehtbd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

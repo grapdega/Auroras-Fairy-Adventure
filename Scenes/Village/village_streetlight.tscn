@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmsdo2ft0pbo0"]
+[gd_scene load_steps=4 format=3 uid="uid://dmsdo2ft0pbo0"]
 
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_ncmwg"]
 [ext_resource type="ArrayMesh" uid="uid://ixaqn1u2mkue" path="res://Models/Valley/Village_Streetlight_Material_005_0.res" id="1_v4v3w"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1vmp0"]
@@ -7,6 +8,7 @@ height = 7.51856
 radius = 0.129283
 
 [node name="VillageStreetlight" type="MeshInstance3D"]
+material_override = ExtResource("1_ncmwg")
 mesh = ExtResource("1_v4v3w")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd25jp3ps7808"]
+[gd_scene load_steps=4 format=3 uid="uid://dd25jp3ps7808"]
 
 [ext_resource type="ArrayMesh" uid="uid://bj12alt1duemx" path="res://Models/Valley/Village_Windmill_Material_005_0.res" id="1_t6kn8"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_xntlh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_derks"]
 size = Vector3(5.545, 4.065, 9.929)
 
 [node name="VillageWindmill" type="MeshInstance3D"]
+material_override = ExtResource("1_xntlh")
 mesh = ExtResource("1_t6kn8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

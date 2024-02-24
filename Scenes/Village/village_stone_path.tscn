@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bucjottvi0ts5"]
+[gd_scene load_steps=3 format=3 uid="uid://bucjottvi0ts5"]
 
 [ext_resource type="ArrayMesh" uid="uid://c4r1pf7usr76h" path="res://Models/Valley/Village_StonePath_Material_005_0.res" id="1_5jqvw"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_pj0eo"]
 
 [node name="VillageStonePath" type="MeshInstance3D"]
+material_override = ExtResource("1_pj0eo")
 mesh = ExtResource("1_5jqvw")

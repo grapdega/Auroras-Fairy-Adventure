@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://h4eahh5sihy5"]
+[gd_scene load_steps=4 format=3 uid="uid://h4eahh5sihy5"]
 
 [ext_resource type="ArrayMesh" uid="uid://bpmd3u4hb0373" path="res://Models/Valley/Village_Tombstone_2_001_Material_005_0.res" id="1_8888d"]
+[ext_resource type="Material" uid="uid://dhm7bx7fdu1gk" path="res://Materials/Village Town Material.material" id="1_h0e3m"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qlqsy"]
 data = PackedVector3Array(-0.8692, 0, 0.2321, -1.0928, 1.9859, -0.3274, -1.0928, 1.9859, 0.3274, -0.8692, 0, 0.2321, -0.8692, 0, -0.2321, -1.0928, 1.9859, -0.3274, -0.8692, 0, -0.2321, 0.965, 2.1251, -0.3274, -1.0928, 1.9859, -0.3274, -0.8692, 0, -0.2321, 0.6818, 0, -0.2321, 0.965, 2.1251, -0.3274, 0.6818, 0, -0.2321, 0.965, 2.1251, 0.3274, 0.965, 2.1251, -0.3274, 0.6818, 0, -0.2321, 0.6818, 0, 0.2321, 0.965, 2.1251, 0.3274, 0.6818, 0, 0.2321, -1.0928, 1.9859, 0.3274, 0.965, 2.1251, 0.3274, 0.6818, 0, 0.2321, -0.8692, 0, 0.2321, -1.0928, 1.9859, 0.3274, 0.965, 2.1251, -0.3274, -1.0928, 1.9859, 0.3274, -1.0928, 1.9859, -0.3274, 0.965, 2.1251, -0.3274, 0.965, 2.1251, 0.3274, -1.0928, 1.9859, 0.3274)
 
 [node name="VillageTombstone2001" type="MeshInstance3D"]
+material_override = ExtResource("1_h0e3m")
 mesh = ExtResource("1_8888d")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
