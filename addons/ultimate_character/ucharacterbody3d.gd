@@ -251,3 +251,9 @@ func _physics_process(delta):
 		last_velocity = velocity
 		
 		move_and_slide()
+
+
+func _on_area_3d_area_entered(area):
+	print(area.name)
+	print()
+	get_parent().enable_group(area.name)
