@@ -186,7 +186,7 @@ func _physics_process(delta):
 				
 			else:
 				current_speed = lerpf(current_speed, walk_speed, delta * 10.0)
-				animation_player.play("idle")
+
 				is_walking = true
 				is_sprinting = false
 				is_crouching = false
@@ -258,3 +258,4 @@ func _on_area_3d_area_entered(area):
 	print(area.name)
 	print()
 	get_parent().enable_group(area.name)
+	area.get_parent().queue_free()
