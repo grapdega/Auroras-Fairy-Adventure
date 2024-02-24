@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://f0eoqttyww2q"]
+
+[ext_resource type="ArrayMesh" uid="uid://deyom1cultl4n" path="res://Models/Model/Village_Picnic Table_Material_005_0.res" id="1_ehtbd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_daer4"]
+size = Vector3(3.14984, 1.01611, 1.46973)
+
+[node name="VillagePicnicTable" type="MeshInstance3D"]
+mesh = ExtResource("1_ehtbd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0340271, 0.511568, 0.0102539)
+shape = SubResource("BoxShape3D_daer4")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5f7dwcvynr2b"]
+
+[ext_resource type="ArrayMesh" uid="uid://bnuotvtfigh7t" path="res://Models/Model/Village_Barn_Material_005_0.res" id="1_rryy0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3r7h"]
+size = Vector3(10.3911, 5.00922, 15.5299)
+
+[node name="VillageBarn" type="MeshInstance3D"]
+mesh = ExtResource("1_rryy0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00151825, 2.50113, -3.8147e-05)
+shape = SubResource("BoxShape3D_r3r7h")

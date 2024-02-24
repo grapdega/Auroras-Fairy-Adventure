@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hs0my2qh2np"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4tgupogky8cq" path="res://Models/Model/Village_Daisy_Material_005_0.res" id="1_j05rh"]
+
+[node name="VillageDaisy" type="MeshInstance3D"]
+mesh = ExtResource("1_j05rh")

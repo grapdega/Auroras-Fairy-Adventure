@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bucjottvi0ts5"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4r1pf7usr76h" path="res://Models/Model/Village_StonePath_Material_005_0.res" id="1_5jqvw"]
+
+[node name="VillageStonePath" type="MeshInstance3D"]
+mesh = ExtResource("1_5jqvw")

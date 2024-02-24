@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcokyesbj1wwh"]
+
+[ext_resource type="ArrayMesh" uid="uid://cq44cdrk6du77" path="res://Models/Model/Village_Pond_Material_005_0.res" id="1_bpbcq"]
+
+[node name="VillagePond" type="MeshInstance3D"]
+mesh = ExtResource("1_bpbcq")

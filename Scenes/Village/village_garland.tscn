@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdjtdsn3jrhnk"]
+
+[ext_resource type="ArrayMesh" uid="uid://dc5qlt4d53wys" path="res://Models/Model/Village_Garland_Material_005_0.res" id="1_qsg11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h1g47"]
+size = Vector3(0.362061, 3.96487, 0.381104)
+
+[node name="VillageGarland" type="MeshInstance3D"]
+mesh = ExtResource("1_qsg11")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997004, 0.0773455, 0, -0.0773455, 0.997004, 0, 0, 0, 1, 3.67744, 1.96814, 0.000366211)
+shape = SubResource("BoxShape3D_h1g47")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.999504, -0.031498, 0, 0.031498, 0.999504, 0, 0, 0, 1, -3.68248, 2.0108, 0.000366211)
+shape = SubResource("BoxShape3D_h1g47")

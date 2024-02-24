@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnhgwmv4x8iij"]
+
+[ext_resource type="ArrayMesh" uid="uid://rlgh5dut46vb" path="res://Models/Model/Village_Farm_Cabbage_Material_005_0.res" id="1_goyld"]
+
+[node name="VillageFarmCabbage" type="MeshInstance3D"]
+mesh = ExtResource("1_goyld")

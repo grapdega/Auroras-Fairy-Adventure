@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c41c1h1x6fnon"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqxn7w1g4rs10" path="res://Models/Model/Village_Market Stall Red_Material_005_0.res" id="1_v00c5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07680"]
+size = Vector3(6.35797, 1, 2.55322)
+
+[node name="VillageMarketStallRed" type="MeshInstance3D"]
+mesh = ExtResource("1_v00c5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.510994, -0.0929084)
+shape = SubResource("BoxShape3D_07680")

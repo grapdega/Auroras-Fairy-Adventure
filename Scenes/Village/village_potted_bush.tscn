@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2vjuyy81mypf"]
+
+[ext_resource type="ArrayMesh" uid="uid://w734e8081q6p" path="res://Models/Model/Village_Potted_Bush_Material_005_0.res" id="1_3w57l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0cqfb"]
+size = Vector3(1.99274, 1, 1.99292)
+
+[node name="VillagePottedBush" type="MeshInstance3D"]
+mesh = ExtResource("1_3w57l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000152588, 0.506973, 0.00378418)
+shape = SubResource("BoxShape3D_0cqfb")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://byqkflbb0unyb"]
+
+[ext_resource type="ArrayMesh" uid="uid://cp2071ig8b6xe" path="res://Models/Model/Village_Crate_Material_005_0.res" id="1_l75fo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b4kvb"]
+size = Vector3(1.38068, 1.38812, 1.3728)
+
+[node name="VillageCrate" type="MeshInstance3D"]
+mesh = ExtResource("1_l75fo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00125122, 0.695394, 0.000366211)
+shape = SubResource("BoxShape3D_b4kvb")
