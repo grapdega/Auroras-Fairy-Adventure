@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c41c1h1x6fnon"]
 
-[ext_resource type="ArrayMesh" uid="uid://cqxn7w1g4rs10" path="res://Models/Model/Village_Market Stall Red_Material_005_0.res" id="1_v00c5"]
+[ext_resource type="ArrayMesh" uid="uid://cqxn7w1g4rs10" path="res://Models/Valley/Village_Market Stall Red_Material_005_0.res" id="1_v00c5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_07680"]
 size = Vector3(6.35797, 1, 2.55322)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo2tobf528uat"]
 
-[ext_resource type="ArrayMesh" uid="uid://bsr5n2r2ruyvf" path="res://Models/Model/Village_House_Blue_Material_005_0.res" id="1_476q2"]
+[ext_resource type="ArrayMesh" uid="uid://bsr5n2r2ruyvf" path="res://Models/Valley/Village_House_Blue_Material_005_0.res" id="1_476q2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ie6qe"]
 size = Vector3(6.31586, 4.18616, 6.47229)

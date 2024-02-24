@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2vjuyy81mypf"]
 
-[ext_resource type="ArrayMesh" uid="uid://w734e8081q6p" path="res://Models/Model/Village_Potted_Bush_Material_005_0.res" id="1_3w57l"]
+[ext_resource type="ArrayMesh" uid="uid://w734e8081q6p" path="res://Models/Valley/Village_Potted_Bush_Material_005_0.res" id="1_3w57l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0cqfb"]
 size = Vector3(1.99274, 1, 1.99292)

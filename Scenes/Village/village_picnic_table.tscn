@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://f0eoqttyww2q"]
 
-[ext_resource type="ArrayMesh" uid="uid://deyom1cultl4n" path="res://Models/Model/Village_Picnic Table_Material_005_0.res" id="1_ehtbd"]
+[ext_resource type="ArrayMesh" uid="uid://deyom1cultl4n" path="res://Models/Valley/Village_Picnic Table_Material_005_0.res" id="1_ehtbd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_daer4"]
 size = Vector3(3.14984, 1.01611, 1.46973)

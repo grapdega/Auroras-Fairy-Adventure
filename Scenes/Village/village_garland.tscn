@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdjtdsn3jrhnk"]
 
-[ext_resource type="ArrayMesh" uid="uid://dc5qlt4d53wys" path="res://Models/Model/Village_Garland_Material_005_0.res" id="1_qsg11"]
+[ext_resource type="ArrayMesh" uid="uid://dc5qlt4d53wys" path="res://Models/Valley/Village_Garland_Material_005_0.res" id="1_qsg11"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1g47"]
 size = Vector3(0.362061, 3.96487, 0.381104)

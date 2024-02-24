@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://u4aoyemilmfc"]
 
-[ext_resource type="ArrayMesh" uid="uid://ir27aqh1bewu" path="res://Models/Model/Village_Sphere_001_Material_005_0.res" id="1_klgo6"]
+[ext_resource type="ArrayMesh" uid="uid://ir27aqh1bewu" path="res://Models/Valley/Village_Sphere_001_Material_005_0.res" id="1_klgo6"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_la8a7"]
 height = 11.6315

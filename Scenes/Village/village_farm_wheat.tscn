@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bu7n0r7240tpp"]
 
-[ext_resource type="ArrayMesh" uid="uid://b8na2rtsdir6s" path="res://Models/Model/Village_Farm_Wheat_Material_005_0.res" id="1_vflfj"]
+[ext_resource type="ArrayMesh" uid="uid://b8na2rtsdir6s" path="res://Models/Valley/Village_Farm_Wheat_Material_005_0.res" id="1_vflfj"]
 
 [node name="VillageFarmWheat" type="MeshInstance3D"]
 mesh = ExtResource("1_vflfj")

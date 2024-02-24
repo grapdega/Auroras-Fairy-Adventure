@@ -1,6 +1,7 @@
 @tool
 extends CharacterBody3D
 class_name UCharacterBody3D
+@onready var animation_player = $Fary/AnimationPlayer
 
 ## A 3D physics body using a revamped template script.
 
@@ -185,7 +186,7 @@ func _physics_process(delta):
 				
 			else:
 				current_speed = lerpf(current_speed, walk_speed, delta * 10.0)
-				
+				animation_player.play("idle")
 				is_walking = true
 				is_sprinting = false
 				is_crouching = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd25jp3ps7808"]
 
-[ext_resource type="ArrayMesh" uid="uid://bj12alt1duemx" path="res://Models/Model/Village_Windmill_Material_005_0.res" id="1_t6kn8"]
+[ext_resource type="ArrayMesh" uid="uid://bj12alt1duemx" path="res://Models/Valley/Village_Windmill_Material_005_0.res" id="1_t6kn8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_derks"]
 size = Vector3(5.545, 4.065, 9.929)

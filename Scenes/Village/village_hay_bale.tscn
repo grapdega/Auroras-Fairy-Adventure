@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xqrbw46elhb2"]
 
-[ext_resource type="ArrayMesh" uid="uid://4oy34a0k6qio" path="res://Models/Model/Village_Hay_Bale_Material_005_0.res" id="1_pdow1"]
+[ext_resource type="ArrayMesh" uid="uid://4oy34a0k6qio" path="res://Models/Valley/Village_Hay_Bale_Material_005_0.res" id="1_pdow1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kohie"]
 size = Vector3(1.41113, 1.17603, 2.35706)

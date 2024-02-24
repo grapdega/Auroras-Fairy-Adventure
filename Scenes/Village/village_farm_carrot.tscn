@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bq5ko5oo460aj"]
 
-[ext_resource type="ArrayMesh" uid="uid://bfd8we52lp30m" path="res://Models/Model/Village_Farm_Carrot_Material_005_0.res" id="1_x47u8"]
+[ext_resource type="ArrayMesh" uid="uid://bfd8we52lp30m" path="res://Models/Valley/Village_Farm_Carrot_Material_005_0.res" id="1_x47u8"]
 
 [node name="VillageFarmCarrot" type="MeshInstance3D"]
 mesh = ExtResource("1_x47u8")
