@@ -1,0 +1,8 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://bt0b1clvt7swy"]
+
+[resource]
+angle_max = 720.0
+direction = Vector3(0, 0, 0)
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0

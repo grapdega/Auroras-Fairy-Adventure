@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b28warq53amf8"
-path="res://.godot/imported/window_02.png-8bfd4c4baba163d1cfddc8ee8242adde.ctex"
+path="res://.godot/imported/window_02.png-f6961598375dbe1f63a12a7a1782780a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_particle_pack/window_02.png"
-dest_files=["res://.godot/imported/window_02.png-8bfd4c4baba163d1cfddc8ee8242adde.ctex"]
+source_file="res://Evliya/Assets/kenney_particle_pack/window_02.png"
+dest_files=["res://.godot/imported/window_02.png-f6961598375dbe1f63a12a7a1782780a.ctex"]
 
 [params]
 

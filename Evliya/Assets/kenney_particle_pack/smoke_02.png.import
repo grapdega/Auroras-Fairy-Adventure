@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chct36u0f787k"
-path.s3tc="res://.godot/imported/smoke_02.png-49c66c33a87a89360cd2c5f3d1e8ff78.s3tc.ctex"
+path.s3tc="res://.godot/imported/smoke_02.png-fb747fa69ffbd313b221c23b64e7f9ef.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_particle_pack/smoke_02.png"
-dest_files=["res://.godot/imported/smoke_02.png-49c66c33a87a89360cd2c5f3d1e8ff78.s3tc.ctex"]
+source_file="res://Evliya/Assets/kenney_particle_pack/smoke_02.png"
+dest_files=["res://.godot/imported/smoke_02.png-fb747fa69ffbd313b221c23b64e7f9ef.s3tc.ctex"]
 
 [params]
 

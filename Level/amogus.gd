@@ -21,14 +21,16 @@ func disable_group(name):
 func disable(node):
 	for c in node.get_children():
 		disable(c)
-	node.visible = false
+	if not node is AnimationPlayer:
+		node.visible = false
 	if node is CollisionShape3D:
 		node.set_deferred("disabled",true)
 
 func enable(node):
 	for c in node.get_children():
 		enable(c)
-	node.visible = true
+	if not node is AnimationPlayer:
+		node.visible = true
 	if node is CollisionShape3D:
 		node.set_deferred("disabled",false)
 

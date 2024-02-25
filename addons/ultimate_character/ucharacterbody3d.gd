@@ -142,7 +142,7 @@ func _ready():
 	if !Engine.is_editor_hint():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
-		pass
+	animation_player.play("idle")
 
 func _input(event):
 	if !Engine.is_editor_hint():
@@ -181,7 +181,7 @@ func _physics_process(delta):
 			if Input.is_action_pressed(SPRINT):
 				current_speed = lerpf(current_speed, sprint_speed, delta * 10.0)
 
-				
+				animation_player.play("idle")
 				is_walking = false
 				is_sprinting = true
 				is_crouching = false
@@ -202,12 +202,15 @@ func _physics_process(delta):
 		if is_sprinting:
 			head_bob_current_intensity = head_bob_intensity * 4
 			head_bob_index += head_bob_sprinting_speed * delta
+			
 		elif is_walking:
 			head_bob_current_intensity = head_bob_intensity * 2
 			head_bob_index += head_bob_walking_speed * delta
+			animation_player.play("Run")
 		elif is_crouching:
 			head_bob_current_intensity = head_bob_intensity
 			head_bob_index += head_bob_crouching_speed * delta
+			animation_player.play("Run")
 		
 		if is_on_floor() and !is_sliding and input_dir != Vector2.ZERO:
 			head_bob_vector.y = sin(head_bob_index)
@@ -260,4 +263,4 @@ func _on_area_3d_area_entered(area):
 	print(area.name)
 	print()
 	get_parent().enable_group(area.get_parent().name)
-	area.get_parent().queue_free()
+	area.get_parent().play()

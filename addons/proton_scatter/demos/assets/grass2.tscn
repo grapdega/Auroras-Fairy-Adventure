@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnfpwgcqehitb"]
+
+[ext_resource type="PackedScene" uid="uid://301vepbr3ety" path="res://Scenes/Grass/grass_grass_master.tscn" id="1_ox8y6"]
+[ext_resource type="PackedScene" uid="uid://cu6r7b5qi3vml" path="res://Scenes/Grass/grass_shape_variant_grp.tscn" id="2_77tr6"]
+[ext_resource type="PackedScene" uid="uid://k2q71d7xm1rq" path="res://Scenes/Grass/grass_clump_01grp.tscn" id="3_l7gj8"]
+[ext_resource type="PackedScene" uid="uid://dsfh0skulcnms" path="res://Scenes/Grass/grass_ckump_02grp.tscn" id="4_3xyer"]
+[ext_resource type="PackedScene" uid="uid://8mxdrdcnelrc" path="res://Scenes/Grass/grass_ckump_03grp.tscn" id="5_6dxwb"]
+
+[node name="Sketchfab_Scene" type="Node3D"]
+
+[node name="Sketchfab_model" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+
+[node name="c4873ff98ef74dc88ed08176de6a7b96_fbx" type="Node3D" parent="Sketchfab_model"]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+
+[node name="RootNode" type="Node3D" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx"]
+
+[node name="Grass_Grass_Master" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx/RootNode" instance=ExtResource("1_ox8y6")]
+
+[node name="Grass_ShapeVariantGRP" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx/RootNode" instance=ExtResource("2_77tr6")]
+
+[node name="Grass_Clump01GRP" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx/RootNode" instance=ExtResource("3_l7gj8")]
+
+[node name="Grass_Ckump02GRP" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx/RootNode" instance=ExtResource("4_3xyer")]
+
+[node name="Grass_Ckump03GRP" parent="Sketchfab_model/c4873ff98ef74dc88ed08176de6a7b96_fbx/RootNode" instance=ExtResource("5_6dxwb")]

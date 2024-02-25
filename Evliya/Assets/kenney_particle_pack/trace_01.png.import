@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caumgfb0kwu6u"
-path="res://.godot/imported/trace_01.png-934b3e1589c1facdcef5198cca8fc203.ctex"
+path="res://.godot/imported/trace_01.png-d81d0dc7fee8c915868292e2129c26a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_particle_pack/trace_01.png"
-dest_files=["res://.godot/imported/trace_01.png-934b3e1589c1facdcef5198cca8fc203.ctex"]
+source_file="res://Evliya/Assets/kenney_particle_pack/trace_01.png"
+dest_files=["res://.godot/imported/trace_01.png-d81d0dc7fee8c915868292e2129c26a7.ctex"]
 
 [params]
 

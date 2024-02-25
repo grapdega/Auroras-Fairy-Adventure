@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnnk04ficqsok"
-path="res://.godot/imported/scratch_01.png-8ca80768ede26c1b171534d6e84ca41b.ctex"
+path="res://.godot/imported/scratch_01.png-1fe84473f9deead26c0b7fc5dd575ade.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_particle_pack/scratch_01.png"
-dest_files=["res://.godot/imported/scratch_01.png-8ca80768ede26c1b171534d6e84ca41b.ctex"]
+source_file="res://Evliya/Assets/kenney_particle_pack/scratch_01.png"
+dest_files=["res://.godot/imported/scratch_01.png-1fe84473f9deead26c0b7fc5dd575ade.ctex"]
 
 [params]
 

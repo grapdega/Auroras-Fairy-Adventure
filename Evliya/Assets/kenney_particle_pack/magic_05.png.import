@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv5rostm1iuey"
-path.s3tc="res://.godot/imported/magic_05.png-57712376066f6dd7e312d9f4313ea353.s3tc.ctex"
+path.s3tc="res://.godot/imported/magic_05.png-18534760b723b7f6057ef88972d17268.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/kenney_particle_pack/magic_05.png"
-dest_files=["res://.godot/imported/magic_05.png-57712376066f6dd7e312d9f4313ea353.s3tc.ctex"]
+source_file="res://Evliya/Assets/kenney_particle_pack/magic_05.png"
+dest_files=["res://.godot/imported/magic_05.png-18534760b723b7f6057ef88972d17268.s3tc.ctex"]
 
 [params]
 
