@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6ewttxclamer"]
+[gd_scene load_steps=7 format=3 uid="uid://c6ewttxclamer"]
 
 [ext_resource type="Script" path="res://addons/ultimate_character/ucharacterbody3d.gd" id="1_ganla"]
 [ext_resource type="PackedScene" uid="uid://bttfxycfxac75" path="res://Scenes/Fary.tscn" id="2_iefpg"]
+[ext_resource type="Material" uid="uid://lxsi8cjg1irp" path="res://Materials/Character.tres" id="3_1vlal"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o524f"]
 size = Vector3(1.45074, 1, 1.7048)
@@ -27,10 +28,13 @@ target_position = Vector3(0, 2, 0)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.785377, 0)
 
 [node name="Skeleton3D" parent="Fary/Sketchfab_model/Navi_fbx/Object_2/RootNode/Object_4" index="0"]
-bones/2/position = Vector3(-1.16415e-10, 0.001469, 1.70921)
+bones/2/position = Vector3(-1.16415e-10, 0.001469, 3.04562)
 bones/2/rotation = Quaternion(0.680701, -0.191589, 0.691705, -0.146574)
-bones/3/rotation = Quaternion(-0.720463, 0.00222646, -0.00657334, 0.693458)
-bones/4/rotation = Quaternion(-0.645294, 0.00667706, -0.0017763, 0.763903)
+bones/3/rotation = Quaternion(-0.817581, 0.00808058, -0.0258905, 0.575175)
+bones/4/rotation = Quaternion(-0.520953, 0.0263513, -0.00638751, 0.853155)
+
+[node name="Object_8" parent="Fary/Sketchfab_model/Navi_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="1"]
+material_override = ExtResource("3_1vlal")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.563, 0)

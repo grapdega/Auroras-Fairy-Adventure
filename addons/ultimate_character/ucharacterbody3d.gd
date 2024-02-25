@@ -263,4 +263,5 @@ func _on_area_3d_area_entered(area):
 	print(area.name)
 	print()
 	get_parent().enable_group(area.get_parent().name)
+	get_parent().dialog_start(area.get_parent().name)
 	area.get_parent().play()

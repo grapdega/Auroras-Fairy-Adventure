@@ -49,3 +49,8 @@ func _process(delta):
 			else:
 				enable(i)
 		is_koy = ! is_koy
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_node("CanvasLayer/DialogueBox").hide()
+func dialog_start(name):
+	get_node("CanvasLayer/DialogueBox").start(name)
+	

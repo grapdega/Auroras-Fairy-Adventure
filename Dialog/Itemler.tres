@@ -5,60 +5,55 @@
 [resource]
 script = ExtResource("1_0c1gk")
 starts = {
-"1": &"0_1",
-"2": &"0_3",
-"3": &"0_4",
-"4": &"0_5",
-"5": &"0_6",
-"6": &"0_7",
-"7": &"0_8",
-"8": &"0_9"
+"Kilise": &"0_3",
+"bazar": &"0_9",
+"bugday": &"0_4",
+"ev": &"0_1",
+"havuc": &"0_6",
+"inek": &"0_8",
+"koyun": &"0_7",
+"marul": &"0_5"
 }
 nodes = {
 "0_1": {
 "link": &"1_1",
 "offset": Vector2(120, -280),
-"start_id": "1"
-},
-"0_2": {
-"link": "END",
-"offset": Vector2(420, 100),
-"start_id": "1"
+"start_id": "ev"
 },
 "0_3": {
 "link": &"1_2",
 "offset": Vector2(120, 0),
-"start_id": "2"
+"start_id": "Kilise"
 },
 "0_4": {
 "link": &"1_5",
 "offset": Vector2(120, 360),
-"start_id": "3"
+"start_id": "bugday"
 },
 "0_5": {
 "link": &"1_3",
 "offset": Vector2(140, 780),
-"start_id": "4"
+"start_id": "marul"
 },
 "0_6": {
 "link": &"1_4",
 "offset": Vector2(120, 1120),
-"start_id": "5"
+"start_id": "havuc"
 },
 "0_7": {
 "link": &"1_6",
 "offset": Vector2(120, 1460),
-"start_id": "6"
+"start_id": "koyun"
 },
 "0_8": {
 "link": &"1_7",
 "offset": Vector2(140, 1780),
-"start_id": "7"
+"start_id": "inek"
 },
 "0_9": {
 "link": &"1_8",
 "offset": Vector2(140, 2100),
-"start_id": "8"
+"start_id": "bazar"
 },
 "1_1": {
 "dialogue": "Bir şeyler buldum ama... dur şu insanların işine yarayabilir.",
@@ -70,7 +65,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 255),
+"size": Vector2(300, 291),
 "speaker": 0
 },
 "1_2": {
@@ -83,7 +78,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 295),
+"size": Vector2(300, 294.999),
 "speaker": 1
 },
 "1_3": {
@@ -109,7 +104,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 295),
+"size": Vector2(300, 294.999),
 "speaker": 3
 },
 "1_5": {
@@ -148,7 +143,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 295),
+"size": Vector2(300, 295.001),
 "speaker": 6
 },
 "1_8": {
@@ -167,5 +162,5 @@ nodes = {
 }
 variables = {}
 comments = Array[String]([])
-strays = Array[String](["0_2"])
+strays = Array[String]([])
 characters = "res://Scenes/Character/Characters.tres"
