@@ -1,5 +1,11 @@
 extends Node3D
 
+"""
+koy gurubuna eklenen objeler koy modunda gozukur item modunda gozukmez
+hidden gurubunda olanlar baslangicta gozukmez ve gurubu acilana kadar gozukmez
+guruba eklenenler acilana kadar gozukmez
+!koy gurubuna eklenenler koy modunda gozukmez
+"""
 var is_koy = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,15 +34,16 @@ func enable(node):
 
 func enable_group(name):
 	for i in get_tree().get_nodes_in_group(name):
-		enable(i)
+		i.add_to_group("koy")
 	for i in get_tree().get_nodes_in_group("!"+name):
 		disable(i)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		for i in get_tree().get_nodes_in_group("koy"):
-			i.visible = ! i.visible
-		for i in get_tree().get_nodes_in_group("item"):
-			i.visible =! i.visible
+		for i in get_tree().get_nodes_in_group("koy") + \
+			get_tree().get_nodes_in_group("!koy"):
+			if i.visible:
+				disable(i)
+			else:
+				enable(i)
 		is_koy = ! is_koy
-

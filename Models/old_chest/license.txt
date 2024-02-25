@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Chest
+* source:	https://sketchfab.com/3d-models/old-chest-201b556f0771442a95716cab046a1ee6
+* author:	TridentCorp (https://sketchfab.com/tridentcorp)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Chest" (https://sketchfab.com/3d-models/old-chest-201b556f0771442a95716cab046a1ee6) by TridentCorp (https://sketchfab.com/tridentcorp) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
