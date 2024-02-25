@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://0qx81bmh48by"]
+
+[ext_resource type="Texture2D" uid="uid://bv5rostm1iuey" path="res://Assets/kenney_particle_pack/magic_05.png" id="1_jpfdx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5u1e6"]
+inherit_velocity_ratio = 1.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_55408"]
+next_pass = SubResource("ParticleProcessMaterial_5u1e6")
+transparency = 1
+blend_mode = 1
+albedo_texture = ExtResource("1_jpfdx")
+metallic = 1.0
+rim_enabled = true
+rim = 0.76
+rim_tint = 0.92
+
+[sub_resource type="QuadMesh" id="QuadMesh_qtxvg"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_55408")
+
+[node name="PeriKanadiEffect" type="Node3D"]
+
+[node name="GPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361943, -0.565508, -4.49714)
+transparency = 0.59
+cast_shadow = 0
+lifetime = 0.5
+mesh = SubResource("QuadMesh_qtxvg")
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+linear_accel_max = 49.72
+damping_max = 100.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.922334, 2.69787)

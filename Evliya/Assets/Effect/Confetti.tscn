@@ -1,0 +1,153 @@
+[gd_scene load_steps=16 format=3 uid="uid://bgqlml68wfyaf"]
+
+[ext_resource type="Texture2D" uid="uid://ch3dau32pwohf" path="res://Assets/kenney_particle_pack/flame_05.png" id="1_q24y7"]
+
+[sub_resource type="Curve" id="Curve_he6aq"]
+min_value = -1.0
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h3kld"]
+curve = SubResource("Curve_he6aq")
+
+[sub_resource type="Curve" id="Curve_mm3cq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.953052, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fbate"]
+curve = SubResource("Curve_mm3cq")
+
+[sub_resource type="Curve" id="Curve_6ogpa"]
+min_value = -1024.0
+max_value = 1024.0
+_data = [Vector2(0.102041, 1024), 0.0, 0.0, 0, 0, Vector2(0.408163, -1024), 0.0, 0.0, 0, 0, Vector2(1, -1024), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7rl5q"]
+curve = SubResource("Curve_6ogpa")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bbspv"]
+particle_flag_rotate_y = true
+particle_flag_damping_as_friction = true
+angle_min = 0.5
+angle_max = 30.0
+inherit_velocity_ratio = -0.23
+velocity_pivot = Vector3(0, 1, 0)
+direction = Vector3(0, 1, 0)
+flatness = 1.0
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+angular_velocity_min = 720.0
+angular_velocity_max = 720.0
+orbit_velocity_min = 2.0
+orbit_velocity_max = 2.0
+gravity = Vector3(0, -100, 0)
+linear_accel_min = 1.0
+linear_accel_max = 10.0
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_fbate")
+scale_over_velocity_curve = SubResource("CurveTexture_7rl5q")
+color = Color(0, 0, 0, 1)
+hue_variation_min = -0.35
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("CurveTexture_h3kld")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pdm0l"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_q24y7")
+emission_enabled = true
+emission = Color(0.878431, 0, 0.968627, 1)
+emission_energy_multiplier = 5.19
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_jogc8"]
+material = SubResource("ORMMaterial3D_pdm0l")
+
+[sub_resource type="Skin" id="Skin_ds55d"]
+bind_count = 1
+bind/0/name = &""
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_w5mbt"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_q24y7")
+emission_enabled = true
+emission = Color(0.603922, 0.580392, 0.0392157, 1)
+emission_energy_multiplier = 5.19
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_3l3cw"]
+material = SubResource("ORMMaterial3D_w5mbt")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_vvyop"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_q24y7")
+emission_enabled = true
+emission = Color(0, 0.639216, 0.670588, 1)
+emission_energy_multiplier = 5.19
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_nnh2g"]
+material = SubResource("ORMMaterial3D_vvyop")
+
+[node name="PeriKanadiEffect" type="Node3D"]
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361943, -0.565508, -1.32118)
+cast_shadow = 0
+gi_mode = 0
+amount = 20
+lifetime = 3.0
+preprocess = 0.2
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_bbspv")
+draw_pass_1 = SubResource("QuadMesh_jogc8")
+draw_skin = SubResource("Skin_ds55d")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361943, -0.565508, -1.32118)
+cast_shadow = 0
+gi_mode = 0
+amount = 20
+lifetime = 3.0
+preprocess = 0.2
+explosiveness = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_bbspv")
+draw_pass_1 = SubResource("QuadMesh_3l3cw")
+draw_skin = SubResource("Skin_ds55d")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361943, -0.565508, -1.32118)
+cast_shadow = 0
+gi_mode = 0
+amount = 20
+lifetime = 3.0
+preprocess = 0.2
+explosiveness = 1.0
+randomness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_bbspv")
+draw_pass_1 = SubResource("QuadMesh_nnh2g")
+draw_skin = SubResource("Skin_ds55d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.922334, 2.69787)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bannb5gdwpfnb"]
+
+[ext_resource type="Texture2D" uid="uid://c3ehtvuw6rrfc" path="res://Assets/kenney_particle_pack/smoke_03.png" id="1_arlmt"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3t883"]
+angle_max = 720.0
+direction = Vector3(0, 0, 0)
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w60a5"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+depth_draw_mode = 2
+albedo_texture = ExtResource("1_arlmt")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_xcui1"]
+material = SubResource("StandardMaterial3D_w60a5")
+
+[node name="ToplamaEffect" type="Node3D"]
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+emitting = false
+amount = 36
+sub_emitter = NodePath(".")
+lifetime = 0.3
+one_shot = true
+randomness = 1.0
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_3t883")
+draw_pass_1 = SubResource("QuadMesh_xcui1")
